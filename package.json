@@ -15,7 +15,8 @@
     "nem2-sdk": "^0.15.0",
     "open": ">=6.0.0",
     "qrcode": "^1.4.4",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.5",
@@ -52,7 +53,9 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "pretest": "npm run build",
     "test": "mocha --compilers js:babel-core/register --ui bdd --recursive ./dist/test",
-    "examples": "node dist/examples/index.js"
+    "examples": "node dist/examples/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -66,5 +69,6 @@
   "bugs": {
     "url": "https://github.com/AnthonyLaw/nem2-qr-library/issues"
   },
-  "homepage": "https://github.com/AnthonyLaw/nem2-qr-library#readme"
+  "homepage": "https://github.com/AnthonyLaw/nem2-qr-library#readme",
+  "snyk": true
 }
